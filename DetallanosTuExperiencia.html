@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\DetallanosTuExperiencia.css">
+    <title>Formulario PepeSport</title>
+</head>
+<body>
+    <div>
+   <form action="https://formspree.io/f/xoqgbvld" method="POST">
+        <h1>Formulario PepeSport</h1>
+        <div class="rating-container">
+            <input id="radio1" type="radio" name="estrellas" value="5">
+            <label for="radio1">★</label>
+            <input id="radio2" type="radio" name="estrellas" value="4">
+            <label for="radio2">★</label>
+            <input id="radio3" type="radio" name="estrellas" value="3">
+            <label for="radio3">★</label>
+            <input id="radio4" type="radio" name="estrellas" value="2">
+            <label for="radio4">★</label>
+            <input id="radio5" type="radio" name="estrellas" value="1">
+            <label for="radio5">★</label>
+     </div>
+
+        <div class="input-group">
+            <label for="name">Ingrese su nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+            <label for="apellido">Ingrese su apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+            <label for="numero">Ingrese su numero</label>
+            <input type="number" min="1" maxlength="12" id="numero" placeholder="Ingrese su numero"> 
+            <label for="email">Ingrese su email</label>
+            <input type="text" name="email" id="email" placeholder="Ingrese su email" required>
+            <label for="Mensaje">Ingrese su mensaje</label>
+            <textarea name="Mensaje" id="Mensaje" cols="30" rows="5" placeholder="Ingrese su mensaje"></textarea required>
+     
+
+        </div>
+        <div class="form-txt">
+            <a href="#">Politica de privacidad</a> |
+            <a href="#">Terminos y condiciones</a>
+        </div>
+        <input class="btn" onclick= " return enviarFormulario();" type="submit" value="Enviar">
+     
+      
+    </form>
+    <div id="error"></div>
+    </div>
+    <script src="js\DetallanosTuOpinion.js"></script>
+
+
+</body>
+</html>
