@@ -67,6 +67,9 @@ input::placeholder, textarea::placeholder{
 .bnt:hover{
  background-color: #50E048;   
 }
+.invisible-element {
+    opacity: 0;
+}
 @media(max-width:991px){
     body{
         padding: 30px;

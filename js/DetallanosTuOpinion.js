@@ -1,7 +1,7 @@
 var nombre = document.getElementById('nombre');
 var apellido = document.getElementById('apellido');
 var numero = document.getElementById('numero');
-var email = document.getElementById('email');
+var email = document.getElementById('correo');
 var mensaje = document.getElementById('mensaje');
 var error = document.getElementById('error');
 error.style.color = 'red';
