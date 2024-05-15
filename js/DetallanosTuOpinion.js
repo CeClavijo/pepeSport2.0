@@ -31,41 +31,5 @@ function enviarformulario(){
 
     return false;
 }
-//confirmar compra
-document.addEventListener("DOMContentLoaded", function() {
-    var nextBtn = document.getElementById('nextBtn');
-    var confirmationPopup = document.getElementById('confirmationPopup');
-    var backBtn = document.getElementById('backBtn');
-    var confirmBtn = document.getElementById('confirmBtn');
-
-    nextBtn.addEventListener('click', function() {
-        popup.classList.remove('active');
-        confirmationPopup.classList.add('active');
-    });
-
-    backBtn.addEventListener('click', function() {
-        confirmationPopup.classList.remove('active');
-        popup.classList.add('active');
-    });
-
-    confirmBtn.addEventListener('click', function() {
-        var confirmPurchase = confirm("Desea confirmar la compra?");
-        if (confirmPurchase) {
-            // Close the popups and display confirmation message
-            confirmationPopup.classList.remove('active');
-            popup.classList.remove('active');
-            alert("Compra confirmada");
-        }
-    });
-
-    // Optionally, you can handle form submission if needed
-    var purchaseForm = document.getElementById('purchaseForm');
-    purchaseForm.addEventListener('submit', function(event) {
-        // Prevent the default form submission behavior
-        event.preventDefault();
-        
-        // Handle form submission logic here
-    });
-});
 
    
