@@ -32,4 +32,12 @@ function enviarformulario(){
     return false;
 }
 
-   
+document.getElementById('ratingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Aquí puedes agregar la lógica para enviar los datos del formulario si es necesario.
+    
+    // Mostrar el mensaje de agradecimiento
+    document.getElementById('ratingForm').style.display = 'none';
+    document.getElementById('thankYouMessage').classList.remove('hidden');
+});
+
