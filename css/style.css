@@ -37,25 +37,28 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
+    font-size: 20px; 
+    color: rgb(175, 175, 175);
 }
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(175, 175, 175);
-    font-size: 20px;
+    color: inherit; 
 }
 
 nav ul li a:hover {
     color: white;
+    cursor: pointer;
 }
 
-nav ul li.active a {
+nav ul li.active {
     color: white;
     font-size: 25px;
     position: relative;
+    cursor: pointer;
 }
 
-nav ul li.active a::after {
+nav ul li.active::after {
     content: "";
     display: block;
     width: 100%;
@@ -65,8 +68,8 @@ nav ul li.active a::after {
     bottom: -5px;
     left: 0;
 }
+
 main{
-    border-bottom: 1px solid #ccc;
     background-color:black;
     width: 100%;
     height: auto;
@@ -75,7 +78,7 @@ main{
     display: flex;
     justify-content: center;
 }
-.logo, .carusel{
+.logo{
     height:400px;
     width: 400px;
 }
@@ -97,6 +100,7 @@ footer a{
     font-size: 10px;
     color: rgb(255, 255, 255);
     text-decoration: none;
+    cursor: pointer;
 }
 .insta:hover{
     text-shadow: 0 0 10px rgba(236, 54, 172, 0.867);
@@ -162,6 +166,7 @@ footer p{
     text-align: center;
 }
 video{
+    margin-top: 50px;
     position: relative;
     height: 360px;
     width:  640px;
@@ -180,6 +185,7 @@ video{
     
 }
 .titulo a:hover{
+    cursor: pointer;
     text-decoration: underline;
     color: rgb(8, 220, 29);
 }
@@ -206,6 +212,7 @@ video{
 }
 
 .product img {
+    cursor: pointer;
     width: 100%;
     height: auto;
 }
@@ -263,6 +270,7 @@ button:hover {
     height: 500px;
     margin-right: 20px;
 }
+
 
 .informacion-producto {
     color: white;
@@ -381,6 +389,7 @@ button:hover {
     width: 30vh;
     display: none;
     position: fixed;
+    overflow-y: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -491,6 +500,31 @@ button:hover {
     }
     .informacion-producto {
         font-size: 10px;
+    }
+    .info p{
+        text-align: center;
+        padding-left: 10px;
+        
+    }
+    .info{
+        display:block 
+    }
+    .info img {
+        display: none;
+    }
+    .video{
+        margin-top: 0;
+    }
+    video{
+        height: 240px;
+        width: 320px;
+    }
+    .confirmation-popup input, select, option{
+        color: #000000;
+        background-color: white;
+        border:1px solid #002bad;
+        height: 20px;
+        width: 150px;
     }
 }
 @media only screen and (min-width:768px){

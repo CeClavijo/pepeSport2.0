@@ -135,6 +135,52 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 });
+//restriccion de NaN
+document.addEventListener("DOMContentLoaded", function() {
+    const quantityInputs = document.querySelectorAll('.quantity-input');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    quantityInputs.forEach(input => {
+        input.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, ''); // Only allow numeric input
+            if (this.value === '' || this.value < this.min) {
+                this.value = this.min;
+            } else if (this.value > this.max) {
+                this.value = this.max;
+            }
+        });
+
+        input.addEventListener('blur', function() {
+            if (this.value === '') {
+                this.value = this.min;
+            }
+        });
+    });
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const product = this.closest('.product');
+            const quantityInput = product.querySelector('.quantity-input');
+            const quantity = parseInt(quantityInput.value, 10);
+            if (isNaN(quantity) || quantity < 1) {
+                alert('Cantidad inválida. Por favor, ingrese un valor válido.');
+                quantityInput.value = 1;
+                return;
+            }
+
+
+            addToCart(product, quantity);
+        });
+    });
+
+    function addToCart(product, quantity) {
+        const productName = product.querySelector('h2').textContent;
+        const productPrice = parseFloat(product.querySelector('p').textContent.replace('$', '').replace('.', ''));
+        const totalPrice = productPrice * quantity;
+
+        console.log(`Producto: ${productName}, Cantidad: ${quantity}, Precio Total: $${totalPrice}`);
+    }
+});
 //confirmar compra
 document.addEventListener("DOMContentLoaded", function() {
     var nextBtn = document.getElementById('nextBtn');
